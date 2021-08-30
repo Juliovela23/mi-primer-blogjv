@@ -9,8 +9,17 @@
 </head>
 
 <body>
-    <a>
+    <a style="color:#FF0000;">
         todo funciona correctamente
-    </a></body>
+    </a> {% for post in posts %}
+    <div>
+        <p> publicado: {{ post.published_date }}</p>
+        <h2><a>{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+
+</body>
+
 
 </html>
